@@ -27,5 +27,5 @@ module.exports = {
       game5Address: [process.env.GAME5_CONTRACT_ADDRESS],
     }
   },
-  solidity: "0.8.17",
+  solidity: "0.8.4",
 };

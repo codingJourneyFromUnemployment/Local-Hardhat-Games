@@ -1,8 +1,8 @@
 const hre = require("hardhat");
 const { ethers } = require("ethers");
 // add the game address here and update the contract name if necessary
-const gameAddr = hre.network.config.game1Address[0];
-const contractName = "Game1";
+const gameAddr = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9";
+const contractName = "Game2";
 
 async function main() {
     // attach to the game
@@ -15,6 +15,8 @@ async function main() {
     });
 
     // do whatever you need to do to win the game here:
+    await game.setX(30);
+    await game.setY(20);
     const tx = await game.win();
 
     // did you win? Check the transaction receipt!
